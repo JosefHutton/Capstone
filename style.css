@@ -1,18 +1,18 @@
 /* Reset Styles */
-* {
+/* * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	border: 1px solid red;
+	border: 1px solid red; */
 	/* remove this later ^^^ */
-}
+/* } */
 
 /* Body Styles */
-body {
+/* body {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
-	background-color: #1c1c1c;
-}
+	background-color: #150b17;
+} */
 
 /* Header Styles */
 header {
@@ -21,7 +21,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
-	background-color: #333;
+	background-color: #000000;
 	color: #fff;
 }
 
@@ -67,25 +67,39 @@ nav ul li.dropdown ul li {
 .search-bar input [type="text"]
 
 /* Main Styles */
-main {
-	display: flex;
-	background-color: #222;
+
+#test {
+	/* display: grid; */
+	background-color: #00902b;
+	border: 1px solid red;
+	color: #ffff00;
 }
 
 .box, .box2, img {
 	margin: 5px;
 	margin-right: 5px;
-	max-width: 600px;
-	max-height: 600px;
-	background-color: #333;
+	max-width: 500px;
+	max-height: 500px;
+	/* background-color: #333;
 	border: 1px solid #444;
-	color: #fff;
+	color: #fff; */
 	display: grid;
 	grid-template-columns: 600px;
 	gap: 20px;
 	grid-auto-rows: minmax(100px, auto);
 }
 
+/* .2by2 {
+  margin: 20px auto;
+  width:400px;
+  height:400px;
+  background-color:#fff;
+  display:grid;
+  grid-template-columns: 20em 20em;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+} */
 
 /* Footer Styles */
 footer {
