@@ -1,3 +1,6 @@
+import html from "html-literal";
+
+export default () => html`
 <div id= test>
 <div class="box">
   <a href="link here">
@@ -24,3 +27,4 @@
   <p>insert text here, insert text here, insert text here, insert text here</p>
 </div>
 </div>
+`;
