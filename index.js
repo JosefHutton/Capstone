@@ -1,12 +1,33 @@
 import { Header, Nav, Main, Footer } from "./components";
+import * as store from "./store";
+import Navigo from "navigo";
+import { capitalize } from "lodash";
 
-function render () => {
-  document.querySelector(`#root`).innerHTML = `
-  ${Header()}
-  ${Nav()}
-  ${Main()}
-  ${Footer()}
+const router = new Navigo("/");
+
+function render(state = store.Home) {
+  document.querySelector("#root").innerHTML = `
+    ${Header(state)}
+    ${Nav(store.Links)}
+    ${Main(state)}
+    ${Footer()}
   `;
+  router.updatePageLinks();
 }
 
 render();
+
+router
+.on({
+  "/": () => render(),
+  ":view": (params) => {
+    let view = capitalize(params.data.view);
+    if (store.hasOwnProperty(view)) {
+      render(store[view]);
+    } else {
+      render(store.Viewnotfound);
+      console.log(`View ${view} not defined`);
+    }
+  },
+})
+.resolve();

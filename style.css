@@ -1,23 +1,20 @@
 /* Reset Styles */
-/* * {
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	border: 1px solid red; */
-	/* remove this later ^^^ */
-/* } */
+	border: 1px solid red;
+	}
 
 /* Body Styles */
-/* body {
+  body {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	background-color: #150b17;
-} */
+}
 
 /* Header Styles */
 header {
-	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
@@ -28,11 +25,15 @@ header {
 .logo {
 	font-size: 24px;
 	font-weight: bold;
+	text-align: center;
 }
+
+
 
 nav ul {
 	display: flex;
 	list-style: none;
+
 }
 
 nav ul li {
@@ -40,7 +41,7 @@ nav ul li {
 }
 
 nav ul li a {
-	color: #eee;
+	color: #fefefe;
 	text-decoration: none;
 }
 
@@ -52,24 +53,19 @@ nav ul li.dropdown ul {
 
 nav ul li.dropdown:hover ul {
 	display: block;
+	text-align: left;
 }
 
 nav ul li.dropdown ul li {
 	display: block;
 }
 
-.search-bar {
-	display: flex;
-	align-items: center;
-	margin-left: auto;
-}
 
-.search-bar input [type="text"]
 
 /* Main Styles */
 
 #test {
-	/* display: grid; */
+	display: grid;
 	background-color: #00902b;
 	border: 1px solid red;
 	color: #ffff00;
@@ -80,9 +76,9 @@ nav ul li.dropdown ul li {
 	margin-right: 5px;
 	max-width: 500px;
 	max-height: 500px;
-	/* background-color: #333;
+	background-color: #333;
 	border: 1px solid #444;
-	color: #fff; */
+	color: #fff;
 	display: grid;
 	grid-template-columns: 600px;
 	gap: 20px;
@@ -121,6 +117,11 @@ footer {
 }
 
 .footer-links li a {
-	color: #fff;
+	color: #ffffff;
 	text-decoration: none;
+}
+
+.banner {
+	width: 1199px;
+	height: 338px;
 }
