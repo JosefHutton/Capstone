@@ -1,7 +1,7 @@
 import html from "html-literal";
 
-export default () => html`
-<div id= test>
+export default (state) => html`
+<section id="home">
 <div class="box">
   <a href="link here">
     <img src="assets\img\2023_Root_of_Nightmares_Raid_PressKit_Raid_Compressed_001.jpg" alt="Root of Nightmares">
@@ -26,5 +26,5 @@ export default () => html`
   </a>
   <p>insert text here, insert text here, insert text here, insert text here</p>
 </div>
-</div>
+</section>
 `;

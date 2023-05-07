@@ -11,11 +11,19 @@ function render(state = store.Home) {
     ${Nav(store.Links)}
     ${Main(state)}
     ${Footer()}
+
   `;
+
+  afterRender(state);
+
   router.updatePageLinks();
 }
 
-render();
+function afterRender(state) {
+  document.querySelector(".fa-bars").addEventListener("click", () => {
+  document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+});
+}
 
 router
 .on({
@@ -31,3 +39,19 @@ router
   },
 })
 .resolve();
+
+
+
+router
+  .on({
+    "/": () => render(),
+    ":view": (params) => {
+      let view = capitalize(params.data.view);
+      if (store.hasOwnProperty(view)) {
+        render(store[view]);
+      } else {
+        console.log(`View ${view} not defined`);
+      }
+    },
+  })
+  .resolve();

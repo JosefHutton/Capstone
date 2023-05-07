@@ -3,7 +3,6 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	border: 1px solid red;
 	}
 
 /* Body Styles */
@@ -28,7 +27,8 @@ header {
 	text-align: center;
 }
 
-
+.banner {
+}
 
 nav ul {
 	display: flex;
@@ -65,24 +65,23 @@ nav ul li.dropdown ul li {
 /* Main Styles */
 
 #test {
-	display: grid;
 	background-color: #00902b;
 	border: 1px solid red;
 	color: #ffff00;
 }
 
 .box, .box2, img {
-	margin: 5px;
-	margin-right: 5px;
-	max-width: 500px;
+	/* margin: 5px;
+	margin-right: 5px; */
+  max-width: 500px;
 	max-height: 500px;
-	background-color: #333;
+	/* background-color: #333;
 	border: 1px solid #444;
 	color: #fff;
 	display: grid;
 	grid-template-columns: 600px;
 	gap: 20px;
-	grid-auto-rows: minmax(100px, auto);
+	grid-auto-rows: minmax(100px, auto); */
 }
 
 /* .2by2 {
