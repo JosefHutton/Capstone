@@ -3,7 +3,9 @@ import myPicture from "../assets/images/destiny2logo.jpg"
 
 export default () => html`
 <header>
-  <div class="logo">Destiny 2 DPS</div>
-  <img src=${myPicture} />
+  <img src=${myPicture} alt="Destiny 2 DPS" />
+  <div class="logo">
+    <p>Destiny 2 DPS</p>
+  </div>
 </header>
 `;
