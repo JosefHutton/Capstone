@@ -1,8 +1,8 @@
 export { default as Home } from "./Home";
-export { default as Loottable } from "./Loottable";
-export { default as Pveweapons } from "./Pveweapons";
-export { default as Raids } from "./Raids";
-export { default as Lostsector } from "./Lostsector";
+export { default as Twoweek } from "./Twoweek";
+export { default as Multiplayer } from "./Multiplayer";
+export { default as Alltime } from "./Alltime";
+export { default as Singleplayer } from "./Singleplayer";
 export { default as Bio } from "./Bio";
 export { default as Contactus } from "./Contactus";
 export { default as Viewnotfound } from "./Viewnotfound";

@@ -1,11 +1,11 @@
 import html from "html-literal";
-import myPicture from "../assets/images/destiny2logo.jpg"
+import myPicture from "../assets/images/steam_logo_resized.jpg"
 
 export default () => html`
 <header>
-  <img src=${myPicture} alt="Destiny 2 DPS" />
+  <img src=${myPicture} alt="pic here" />
   <div class="logo">
-    <p>Destiny 2 DPS</p>
+    <p>Game Finder</p>
   </div>
 </header>
 `;
