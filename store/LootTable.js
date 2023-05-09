@@ -1,4 +1,4 @@
 export default {
-  header: "LootTables and items",
-  view: "LootTables",
+  header: "LootTable and items",
+  view: "Loottable"
 };

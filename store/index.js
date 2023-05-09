@@ -1,7 +1,9 @@
-export { default as LootTable } from "./LootTable";
+export { default as Loottable } from "./Loottable";
 export { default as Home } from "./Home";
 export { default as Raids } from "./Raids";
-export { default as PVEWeapons } from "./PVEWeapons";
+export { default as Pveweapons } from "./Pveweapons";
 export { default as Links } from "./Links";
-export { default as LostSector } from "./LostSector";
-
+export { default as Lostsector } from "./Lostsector";
+export { default as Viewnotfound } from "./Viewnotfound";
+export { default as Bio } from "./Bio";
+export { default as Contactus } from "./Contactus";

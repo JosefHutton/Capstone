@@ -1,4 +1,4 @@
 export default {
   header: "Lost Sector",
-  view: "LostSector",
+  view: "Lostsector"
 };

@@ -136,6 +136,10 @@ p {
   margin-bottom: 0;
 }
 
+h3 {
+  color: #ffffff;
+}
+
 /* Footer Styles */
 footer {
 	display: flex;
