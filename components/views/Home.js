@@ -7,7 +7,10 @@ import myPicture4 from "../../assets/images/single-player-games.jpg"
 export default (state) => html`
 <section id="home">
 <div class="box">
-<img src=${myPicture} />
+<a href="components/views/alltime.html">
+  <img src=${myPicture}>
+</a>
+</a>
 <div class="text">
   <p>Top Played Games</p>
   <p>All Time</p>
@@ -42,4 +45,11 @@ The weather in ${state.weather.city} is ${state.weather.description}. Temperatur
 </h3>
 `;
 
-// add addEventListener for links maybe
+const images = document.querySelectorAll('img');
+
+images.forEach(image => {
+  image.addEventListener('click', () => {
+    // do something when the image is clicked
+    console.log('Image clicked!');
+  });
+});
