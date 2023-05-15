@@ -69,25 +69,16 @@ router.hooks({
           });
         break;
 
-        // router.hooks({
-        //   before: (done, params) => {
-        //     const view = params && params.data && params.data.view ? capitalize(params.data.view) : "Home";
-        //     // Add a switch case statement to handle multiple routes
-        //     switch (view) {
-        //       case "topalltime":
-        //         // New Axios get request utilizing already made environment variable
-        //         axios
-        //           .get(`https://steamspy.com/api.php?request=top100forever`)
-        //           .then(response => {
-        //             // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
-        //             console("response", response);
-        //             done();
-        //           })
-        //           .catch((error) => {
-        //             console.log("It puked", error);
-        //             done();
-        //           });
-        //           break;
+              // case "Alltime":
+              //   // New Axios get request utilizing already made environment variable
+              //   axios
+              //     .get(`http://steamspy.com/api.php?request=top100forever`)
+              //     .then(response => {
+              //       // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+              //       console.log(response.data);
+              //       done();
+              //     });
+              //     break;
 
       default:
         done();

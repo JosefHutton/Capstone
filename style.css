@@ -70,21 +70,6 @@ nav ul li a {
 	text-decoration: none;
 }
 
-nav ul li.dropdown ul {
-	display: none;
-	position: absolute;
-	background-color: #444;
-}
-
-nav ul li.dropdown:hover ul {
-	display: block;
-	text-align: left;
-}
-
-nav ul li.dropdown ul li {
-	display: block;
-}
-
 
 
 /* Main Styles */
