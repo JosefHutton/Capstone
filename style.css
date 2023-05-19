@@ -157,6 +157,7 @@ footer {
 	background-color: #333;
 	color: #fff;
 	padding: 20px;
+  clear: right;
 }
 
 .footerclass {
@@ -181,4 +182,82 @@ footer {
 .banner {
 	width: 1199px;
 	height: 338px;
+}
+
+/* Contact Us */
+.contactform {
+  width: 300px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+.left-section {
+  float: left;
+  width: 500px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: white;
+}
+
+.right-section {
+  float: right;
+  width: 400px; /* Adjust the width if needed */
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  color: #000000;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.checkbox-group {
+  margin-bottom: 10px;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
 }
