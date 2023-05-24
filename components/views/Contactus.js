@@ -15,8 +15,8 @@ export default (state) => html`
 
       <div class="right-section">
         <div class="contactform">
-          <h2>Contact Us</h2>
-          <form action="" method="post">
+          <h1>Contact Us</h1>
+          <form action="" method="post" id="contact">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
 

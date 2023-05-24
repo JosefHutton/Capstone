@@ -186,30 +186,12 @@ footer {
 
 /* Contact Us */
 .contactform {
-  width: 300px;
-  margin: 0 auto;
-  color: #000000;
-}
-
-.left-section {
-  float: left;
-  width: 500px;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
   padding: 20px;
-  margin-top: 20px;
-  margin-left: 20px;
-  color: white;
-}
-
-.right-section {
-  float: right;
-  width: 400px; /* Adjust the width if needed */
   background-color: #f2f2f2;
-  padding: 20px;
   border-radius: 5px;
-  margin-top: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
   color: #000000;
 }
 
@@ -247,6 +229,8 @@ input[type="checkbox"] {
 
 h2 {
   text-align: center;
+  color: white;
+  margin-top: 35px;
 }
 
 .checkbox-group {
@@ -260,4 +244,51 @@ h2 {
 
 .checkbox-group input[type="checkbox"] {
   margin-right: 5px;
+}
+
+/* Alltime page */
+#Alltime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+h2 img {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  margin-right: 10px;
+}
+
+/* Multiplayer */
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  width: 32%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.column img {
+  width: 33%;
+  height: auto;
+  background-color: white;
 }

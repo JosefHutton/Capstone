@@ -1,4 +1,5 @@
 export default {
-  header: "Twoweek",
-  view: "Twoweek"
+  header: "Twoweek top played",
+  view: "Twoweek",
+  toptwoweek: []
 };
