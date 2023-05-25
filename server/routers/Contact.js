@@ -17,7 +17,7 @@ router.post("/", (request, response) => {
 
 // Get (read) all records from the collection
 router.get("/", (request, response) => {
-  newContact.find({}, (error, record) => {
+  Contactus.find({}, (error, record) => {
     if (error) return response.status(500).json(error.errors);
 
     response.json(record);
@@ -26,7 +26,7 @@ router.get("/", (request, response) => {
 
 // Get a single record by ID using a query parameter
 router.get("/:id", (request, response) => {
-  newContact.findById(request.params.id, (error, record) => {
+  Contactus.findById(request.params.id, (error, record) => {
     if (error) return response.status(500).json(error.errors);
 
     response.json(record);
@@ -34,7 +34,7 @@ router.get("/:id", (request, response) => {
 });
 
 router.delete("/:id", (request, response) => {
-  newContact.findByIdAndRemove(request.params.id, {}, (error, record) => {
+  Contactus.findByIdAndRemove(request.params.id, {}, (error, record) => {
     if (error) return response.status(500).json(error.errors);
 
     response.json(record);

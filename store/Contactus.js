@@ -1,4 +1,5 @@
 export default {
   header: "Contactus",
-  view: "Contactus"
+  view: "Contactus",
+  contact: []
 };

@@ -41,10 +41,10 @@ if (state.view === "Contactus") {
     console.log("request Body", requestData);
 
     axios
-      .post(`${process.env.CONTACTUS}/Contact`, requestData)
+      .post(`${process.env.CONTACTUS}/Contactus`, requestData)
       .then(response => {
-        store.Footerlinks.Contactus.push(response.data);
-        router.navigate("/Contact");
+        store.Contactus.contact.push(response.data);
+        router.navigate("/Contactus");
       })
       .catch(error => {
         console.log("It puked", error);
