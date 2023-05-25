@@ -157,6 +157,7 @@ footer {
 	background-color: #333;
 	color: #fff;
 	padding: 20px;
+  clear: right;
 }
 
 .footerclass {
@@ -181,4 +182,113 @@ footer {
 .banner {
 	width: 1199px;
 	height: 338px;
+}
+
+/* Contact Us */
+.contactform {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  color: #000000;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  margin-top: 35px;
+}
+
+.checkbox-group {
+  margin-bottom: 10px;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Alltime page */
+#Alltime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+h2 img {
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  margin-right: 10px;
+}
+
+/* Multiplayer */
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  width: 32%;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.column img {
+  width: 33%;
+  height: auto;
+  background-color: white;
 }

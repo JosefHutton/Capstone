@@ -1,8 +1,9 @@
 // 'Import' the Express module instead of http
 const express = require("express");
 const dotenv = require("dotenv");
-// const mongoose = require('mongoose');
-// const pizzas = require("./routers/pizzas");
+const axios = require("axios");
+const mongoose = require('mongoose');
+const Contact = require("./routers/Contact");
 // Initialize the Express application
 const app = express();
 
@@ -11,23 +12,21 @@ dotenv.config();
 
 const PORT = process.env.PORT || 4040; // we use || to provide a default value
 
-// mongoose.connect(process.env.MONGODB)
+mongoose.connect(process.env.MONGODB)
 
-// const db = mongoose.connection
+const db = mongoose.connection
 
-// db.on("error", console.error.bind(console, "Connection Error:"));
-// db.once(
-//   "open",
-//   console.log.bind(console, "Successfully opened connection to Mongo!")
-// );
+db.on("error", console.error.bind(console, "Connection Error:"));
+db.once(
+  "open",
+  console.log.bind(console, "Successfully opened connection to Mongo!")
+);
 
 
-// // mongodb+srv://josefhutton:kdh090613@cluster0.phviz0h.mongodb.net/?retryWrites=true&w=majority
-
-// const logging = (request, response, next) => {
-//   console.log(`${request.method} ${request.url} ${Date.now()}`);
-//   next();
-// };
+const logging = (request, response, next) => {
+  console.log(`${request.method} ${request.url} ${Date.now()}`);
+  next();
+};
 
 // CORS Middleware
 const cors = (req, res, next) => {
@@ -46,7 +45,8 @@ const cors = (req, res, next) => {
 
 app.use(cors);
 app.use(express.json());
-// app.use(logging);
+app.use(logging);
+
 
 
 // Handle the request with HTTP GET method from http://localhost:4040/status
@@ -75,16 +75,20 @@ app.get("/status", (request, response) => {
 //   );
 // });
 
-// app.post("/add", (request, response) => {
-//   const num1 = request.body.numberOne;
-//   const num2 = request.body.numberTwo;
-//   const responseBody = {
-//     sum: num1 + num2
-//   };
-//   response.json(responseBody);
-// });
 
-// app.use("/pizzas", pizzas);
+app.get("/steamspy/:acquire", (request, response) => {
+  // New Axios get request utilizing already made environment variable
+  axios
+    .get(`http://steamspy.com/api.php?request=${request.params.acquire}`)
+    .then(spyData => {
+      // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+      console.log(spyData.data);
+      response.json(spyData.data)
+    });
+});
+
+app.use("/Contactus", Contact);
+
 
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
