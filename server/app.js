@@ -3,7 +3,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const axios = require("axios");
 const mongoose = require('mongoose');
-// const pizzas = require("./routers/pizzas");
+const Contact = require("./routers/Contact");
 // Initialize the Express application
 const app = express();
 
@@ -48,6 +48,7 @@ app.use(express.json());
 app.use(logging);
 
 
+
 // Handle the request with HTTP GET method from http://localhost:4040/status
 app.get("/status", (request, response) => {
    // Create the headers for response by default 200
@@ -74,16 +75,6 @@ app.get("/status", (request, response) => {
 //   );
 // });
 
-// app.post("/add", (request, response) => {
-//   const num1 = request.body.numberOne;
-//   const num2 = request.body.numberTwo;
-//   const responseBody = {
-//     sum: num1 + num2
-//   };
-//   response.json(responseBody);
-// });
-
-// app.use("/pizzas", pizzas);
 
 app.get("/steamspy/:acquire", (request, response) => {
   // New Axios get request utilizing already made environment variable
@@ -95,6 +86,8 @@ app.get("/steamspy/:acquire", (request, response) => {
       response.json(spyData.data)
     });
 });
+
+app.use("/Contactus", Contact);
 
 
 // Tell the Express app to start listening

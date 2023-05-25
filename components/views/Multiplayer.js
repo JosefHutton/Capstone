@@ -1,20 +1,21 @@
 import html from "html-literal";
 import myPicture from "../../assets/images/playercount.png";
 import myPicture2 from "../../assets/images/dev.png";
-export default () => html`
+
+export default (state) => html`
 <section id="multiplayer">
   <div class="layout">
     <div class="column">
       <img src="your_image_url1.jpg" alt="Image 1">
-      <p>Text 1</p>
+      <p>${state.topmultiplayer[0].name}</p>
     </div>
     <div class="column">
     <img src=${myPicture2} />
-      <p>Text 2</p>
+      <p>${state.topmultiplayer[0].developer}</p>
     </div>
     <div class="column white-background">
       <img src=${myPicture} />
-      <p>Text 3</p>
+      <p>${state.topmultiplayer[0].ccu}</p>
     </div>
     <div class="column">
       <img src="your_image_url4.jpg" alt="Image 4">

@@ -1,4 +1,5 @@
 export default {
   header: "Multiplayer",
-  view: "Multiplayer"
+  view: "Multiplayer",
+  topmultiplayer: [],
 };
