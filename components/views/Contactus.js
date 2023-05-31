@@ -1,5 +1,5 @@
 import html from "html-literal";
-import myPicture4 from "../../assets/images/single-player-games.jpg";
+import myPicture4 from "../../assets/images/Multiplayer.jpg";
 
 
 export default (state) => html`

@@ -1,4 +1,5 @@
 export default {
   header: "Singleplayer",
-  view: "Singleplayer"
+  view: "Singleplayer",
+  topsingleplayer: []
 };

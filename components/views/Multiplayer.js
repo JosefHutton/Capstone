@@ -1,70 +1,35 @@
 import html from "html-literal";
-import myPicture from "../../assets/images/playercount.png";
-import myPicture2 from "../../assets/images/dev.png";
 
 export default (state) => html`
 <section id="multiplayer">
-  <div class="layout">
-    <div class="column">
-      <img src="your_image_url1.jpg" alt="Image 1">
-      <p>${state.topmultiplayer[0].name}</p>
-    </div>
-    <div class="column">
-    <img src=${myPicture2} />
-      <p>${state.topmultiplayer[0].developer}</p>
-    </div>
-    <div class="column white-background">
-      <img src=${myPicture} />
-      <p>${state.topmultiplayer[0].ccu}</p>
-    </div>
-    <div class="column">
-      <img src="your_image_url4.jpg" alt="Image 4">
-      <p>Text 4</p>
-    </div>
-    <div class="column">
-    <img src=${myPicture2} />
-      <p>Text 5</p>
-    </div>
-    <div class="column white-background">
-      <img src=${myPicture} />
-      <p>Text 6</p>
-    </div>
-    <div class="column">
-      <img src="your_image_url7.jpg" alt="Image 7">
-      <p>Text 7</p>
-    </div>
-    <div class="column">
-    <img src=${myPicture2} />
-      <p>Text 8</p>
-    </div>
-    <div class="column white-background">
-      <img src=${myPicture} />
-      <p>Text 9</p>
-    </div>
-    <div class="column">
-      <img src="your_image_url9.jpg" alt="Image 9">
-      <p>Text 10</p>
-    </div>
-    <div class="column">
-    <img src=${myPicture2} />
-      <p>Text 11</p>
-    </div>
-    <div class="column white-background">
-      <img src=${myPicture} />
-      <p>Text 12</p>
-    </div>
-    <div class="column">
-      <img src="your_image_url9.jpg" alt="Image 9">
-      <p>Text 13</p>
-    </div>
-    <div class="column">
-    <img src=${myPicture2} />
-      <p>Text 14</p>
-    </div>
-    <div class="column white-background">
-      <img src=${myPicture} />
-      <p>Text 15</p>
-    </div>
-  </div>
+<h1>Multiplayer</h1>
+<h1>
+If you are looking for some of the most popular games that Steam has, take a look at our list of the Top 5 most popular games on Steam to date.
+</h1>
+<h2>
+${state.topmultiplayer[0].name}
+Developer: ${state.topmultiplayer[0].developer}
+Average Player Count: ${state.topmultiplayer[0].ccu}
+</h2>
+<h2>
+${state.topmultiplayer[1].name}
+Developer: ${state.topmultiplayer[1].developer}
+Average Player Count: ${state.topmultiplayer[1].ccu}
+</h2>
+<h2>
+${state.topmultiplayer[2].name}
+Developer: ${state.topmultiplayer[2].developer}
+Average Player Count: ${state.topmultiplayer[2].ccu}
+</h2>
+<h2>
+${state.topmultiplayer[3].name}
+Developer: ${state.topmultiplayer[3].developer}
+Average Player Count: ${state.topmultiplayer[3].ccu}
+</h2>
+<h2>
+${state.topmultiplayer[4].name}
+Developer: ${state.topmultiplayer[4].developer}
+Average Player Count: ${state.topmultiplayer[4].ccu}
+</h2>
 </section>
 `;

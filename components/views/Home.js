@@ -1,8 +1,8 @@
 import html from "html-literal";
-import myPicture from "../../assets/images/all_time_top_resized.png";
-import myPicture2 from "../../assets/images/most_played_2week_resized.png";
-import myPicture3 from "../../assets/images/multiplayer-games.jpg";
-import myPicture4 from "../../assets/images/single-player-games.jpg";
+import myPicture from "../../assets/images/AllTime.jpg";
+import myPicture2 from "../../assets/images/Feedback.jpg";
+import myPicture3 from "../../assets/images/Multiplayer.jpg";
+import myPicture4 from "../../assets/images/SinglePlayer.jpg";
 
 export default (state) => html`
   <section id="home">
@@ -21,8 +21,7 @@ export default (state) => html`
         <a href="Twoweek">
           <img src=${myPicture2} />
         </a>
-        <p>Most Played Games</p>
-        <p>Last Two Weeks</p>
+        <p>User Feedback</p>
       </div>
     </div>
 
@@ -46,10 +45,4 @@ export default (state) => html`
       </div>
     </div>
   </section>
-
-  <h3>
-    The weather in ${state.weather.city} is ${state.weather.description}.
-    Temperature is ${state.weather.temp}F, and it feels like
-    ${state.weather.feelsLike}F.
-  </h3>
 `;
