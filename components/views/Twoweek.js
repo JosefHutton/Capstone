@@ -1,6 +1,7 @@
 import html from "html-literal";
 
 export default (state) => html`
+<h1 class="feedback-heading">Feedback</h1>
 <table id="twoweek">
 <tr>
   <th>Name</th>
