@@ -80,7 +80,7 @@ nav ul li a {
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   width: 80%;
   margin: 0 auto;
   height: 100vh;
@@ -148,6 +148,7 @@ h3 {
 }
 
 /* Alltime styles */
+
 #Alltime {
   text-align: center;
   max-width: 800px;
@@ -156,6 +157,126 @@ h3 {
 
 #Alltime h1 {
   color: white;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+#Alltime h3 {
+  color: white;
+  font-size: 24px;
+}
+
+#Alltime h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#Alltime h2 .name {
+  white-space: nowrap;
+  font-size: 36px;
+}
+
+#Alltime h2 .developer,
+#Alltime h2 .ccu {
+  margin-top: 5px;
+}
+
+hr {
+  margin-top: 20px;
+}
+
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+}
+
+/* Multiplayer */
+
+#multiplayer {
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto 0;
+}
+
+#multiplayer h1 {
+  text-align: center;
+  font-size: 48px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+#multiplayer h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+#multiplayer hr {
+  margin-top: 20px;
+}
+
+#multiplayer h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#multiplayer h2 .name {
+  white-space: nowrap;
+  font-size: 36px;
+}
+
+#multiplayer h2 .developer,
+#multiplayer h2 .ccu {
+  margin-top: 5px;
+}
+
+#singleplayer {
+  text-align: center;
+  max-width: 800px;
+  margin: 50px auto 0;
+}
+
+#singleplayer h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 15px;
+}
+
+#singleplayer h3 {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+
+#singleplayer hr {
+  margin-top: 20px;
+}
+
+#singleplayer h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#singleplayer h2 .name {
+  white-space: nowrap;
+  font-size: 36px;
+}
+
+#singleplayer h2 .developer,
+#singleplayer h2 .ccu {
+  margin-top: 5px;
 }
 
 
@@ -256,56 +377,12 @@ h2 {
   margin-right: 5px;
 }
 
-/* Alltime page */
-#Alltime {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
-h1 {
-  margin-bottom: 20px;
-}
 
-h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-h2 img {
-  width: 40px; /* Adjust the width as needed */
-  height: 40px; /* Adjust the height as needed */
-  margin-right: 10px;
-}
-
-/* Multiplayer */
-.layout {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.column {
-  width: 32%;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-sizing: border-box;
-  color: white;
-}
-
-.column img {
-  width: 33%;
-  height: auto;
-  background-color: white;
-}
 
 /* FeedBack */
 .feedback-heading {
-  color: white;
+  color: rgb(255, 255, 255);
   margin-top: 20px; /* Add space above the heading */
   margin-bottom: 20px; /* Add space below the heading */
 }
@@ -332,11 +409,11 @@ td a {
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #020202;
 }
 
 tr:hover {
-  background-color: #ddd;
+  background-color: #0a0909;
 }
 
 /* Bio */
