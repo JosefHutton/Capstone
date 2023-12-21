@@ -80,11 +80,12 @@ nav ul li a {
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   width: 80%;
   margin: 0 auto;
   height: 100vh;
   padding-left: 10%;
+  padding-right: 10%;
 }
 
 .box {
