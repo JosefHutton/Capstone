@@ -66,7 +66,7 @@ router.hooks({
 case "Alltime":
   // New Axios get request utilizing already made environment variable
   axios
-    .get(`http://localhost:4040/steamspy/top100forever`)
+    .get(`https://steamgamefinder.onrender.com/steamspy/top100forever`)
     .then(response => {
       // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
       const data = Object.values(response.data)
@@ -76,44 +76,42 @@ case "Alltime":
     });
     break;
 
-    // case "Twoweek":
-    //   // New Axios get request utilizing already made environment variable
-    //   axios
-    //     .get(`http://localhost:4040/steamspy/top100in2weeks`)
-    //     .then(response => {
-    //       // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
-    //       const data = Object.values(response.data)
-    //       store.Twoweek.toptwoweek = data.slice(0,5);
-    //       console.log(store.Twoweek.toptwoweek);
-    //       done();
-    //     });
-    //     break;
 
         case "Multiplayer":
-      // New Axios get request utilizing already made environment variable
-      axios
-        .get(`http://localhost:4040/steamspy/tag&tag=Multiplayer`)
-        .then(response => {
-          // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
-          const data = Object.values(response.data)
-          store.Multiplayer.topmultiplayer = data.slice(0,5);
-          console.log(store.Multiplayer.topmultiplayer);
-          done();
-        });
-        break;
+          // New Axios get request utilizing already made environment variable
+          axios
+            .get(`https://steamgamefinder.onrender.com/steamspy/tag&tag=Multiplayer`, {
+              params: {
+                limit: 5 // Limit the response to the first 5 data pieces
+              }
+            })
+            .then(response => {
+              // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
+              const data = Object.values(response.data);
+              const topGames = data.slice(0, 5);
+              store.Multiplayer.topmultiplayer = topGames;
+              console.log(store.Multiplayer.topmultiplayer);
+              done();
+            });
+          break;
 
         case "Singleplayer":
           // New Axios get request utilizing already made environment variable
           axios
-            .get(`http://localhost:4040/steamspy/tag&tag=Singleplayer`)
+            .get(`https://steamgamefinder.onrender.com/steamspy/tag&tag=Singleplayer`)
             .then(response => {
               // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
-              const data = Object.values(response.data)
-              store.Singleplayer.topsingleplayer = data.slice(0,5);
+              const data = Object.values(response.data);
+              const topGames = data.slice(0, 5);
+              store.Singleplayer.topsingleplayer = topGames;
               console.log(store.Singleplayer.topsingleplayer);
               done();
+            })
+            .catch(error => {
+              console.log("Error occurred while fetching data:", error);
+              done();
             });
-            break;
+          break;
 
       default:
         done();
