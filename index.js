@@ -66,6 +66,7 @@ router.hooks({
 case "Alltime":
   // New Axios get request utilizing already made environment variable
   axios
+    .get(`http://localhost:4040/steamspy/top100forever`)
     .get(`https://steamgamefinder.onrender.com/steamspy/top100forever`)
     .then(response => {
       // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
@@ -80,6 +81,7 @@ case "Alltime":
         case "Multiplayer":
           // New Axios get request utilizing already made environment variable
           axios
+          .get(`http://localhost:4040/steamspy/tag&tag=Multiplayer`)
             .get(`https://steamgamefinder.onrender.com/steamspy/tag&tag=Multiplayer`, {
               params: {
                 limit: 5 // Limit the response to the first 5 data pieces
@@ -98,6 +100,7 @@ case "Alltime":
         case "Singleplayer":
           // New Axios get request utilizing already made environment variable
           axios
+          .get(`http://localhost:4040/steamspy/tag&tag=Singleplayer`)
             .get(`https://steamgamefinder.onrender.com/steamspy/tag&tag=Singleplayer`)
             .then(response => {
               // We need to store the response to the state, in the next step but in the meantime let's see what it looks like so that we know what to store from the response.
